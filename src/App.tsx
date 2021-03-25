@@ -1,10 +1,13 @@
 import React from 'react'
+import TotalCash from './components/TotalCashInOut';
+import History from './components/History';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Cash Karo</h1>
-    </div>
+    <>
+      <TotalCash />
+      <History />
+    </>
   )
 }
 
