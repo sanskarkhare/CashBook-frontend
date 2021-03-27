@@ -17,7 +17,7 @@ export const SignPara = styled.p`
 export const SignParaMinus = styled(SignPara)`
     font-size: 2rem;
     color: red;
-    background-color: #F08080;
+    background-color: #f08080;
 `
 
 export const Header = styled.header`
@@ -40,6 +40,7 @@ export const HeaderAmountWrapper = styled.div`
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
+    flex: 50%;
     justify-content: center;
     align-items: center;
 `
@@ -47,5 +48,15 @@ export const Wrapper = styled.div`
 export const BodyWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    padding: 1rem;
     margin: 3rem 15rem 1rem 15rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+`
+export const Hr = styled.hr`
+    border: 0;
+    clear:both; 
+    width: 1.5px;               
+    background-color:grey;
+    height: 10vh;
+    margin: auto;
 `

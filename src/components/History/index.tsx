@@ -1,18 +1,34 @@
-import React from 'react'
-
- let transactions: { id: number, item: string, amount: number }[] = [
-     { "id": 0, "item": "Beer", "amount": 200  }
- ];
+import React, { useContext } from 'react'
+import { GlobalContext } from '../../context/GlobalState'
+import { Header, Para, Wrapper, HeaderParaWrapper, Hr } from './index.styles';
 
 
 
 
 const History: React.FC = () => {
+
+    const { transactions } = useContext(GlobalContext);
+
     return (
-        <>
-            {transactions.map((transaction) => (
-                <p key={transaction.id}>{transaction.item}</p>
-            ))}
+        <>  
+            <Wrapper>
+                <HeaderParaWrapper>
+                    <Header>Details</Header>
+                    <Hr />
+                    {transactions.map((transaction: any) => (
+                        <Para key={transaction.id}>{transaction.remark}</Para>
+                    ))}
+                </HeaderParaWrapper>
+                
+                <HeaderParaWrapper>
+                    <Header>Amount</Header>
+                    <Hr />
+                    {transactions.map((transaction: any) => (
+                        <Para key={transaction.id}>{transaction.amount}</Para>
+                    ))}
+                </HeaderParaWrapper>
+                
+            </Wrapper>
         </>
     )
 }

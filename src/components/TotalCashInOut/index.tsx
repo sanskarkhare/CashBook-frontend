@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, SignPara, AmountPara, HeaderAmountWrapper, Wrapper, BodyWrapper, SignParaMinus } from './index.styles';
+import { Header, SignPara, AmountPara, HeaderAmountWrapper, Wrapper, BodyWrapper, SignParaMinus, Hr } from './index.styles';
 
 
 const TotalCash: React.FC = () => {
@@ -13,7 +13,7 @@ const TotalCash: React.FC = () => {
                         <AmountPara>1000</AmountPara>
                     </HeaderAmountWrapper>
                 </Wrapper>
-                    <hr />
+                    <Hr />
                 <Wrapper>
                     <SignParaMinus>-</SignParaMinus>
                     <HeaderAmountWrapper>
