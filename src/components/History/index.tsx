@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../../context/GlobalState'
 import { Header, Para, Wrapper, HeaderParaWrapper, Hr } from './index.styles';
+import { context } from '../../context/GlobalState';
 
 
 
 
 const History: React.FC = () => {
 
-    const { transactions } = useContext(GlobalContext);
+    const { transactions } = useContext(context);
 
     return (
         <>  
