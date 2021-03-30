@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, SignPara, AmountPara, HeaderAmountWrapper, Wrapper, BodyWrapper, SignParaMinus, Hr } from './index.styles';
+import GlobalProvider from '../../context/GlobalState';
 
 
 const TotalCash: React.FC = () => {

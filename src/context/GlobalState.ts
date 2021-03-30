@@ -1,23 +1,33 @@
-import { createContext } from 'react';
-
-// type transactionsObject = { id: number, remark: string, amount: number };
-
-const transactions: { id: number, remark: string, amount: number }[] = [
-    { "id": 0, "remark": "Beer", "amount": 200 },
-    { "id": 1, "remark": "Pen", "amount": 20 }
-] 
+import { createContext, useReducer } from 'react';
 
 
+export interface MyState {
+    transactions: { id: number, remark: string, amount: number }[],
+    error: string | null,
+    loading: boolean
+}
 
-export const initialState = {
-    transactions,
+
+export const initialState: MyState = {
+    transactions: [
+        { "id": 0, "remark": "Beer", "amount": 200 },
+        { "id": 1, "remark": "Pen", "amount": 20 }
+    ],
     error: null,
     loading: true
 }
 
-export type userState = typeof initialState;
+// export type userState = typeof initialState;
 
 
-export const context = createContext<typeof initialState>(initialState);
-// export const HelperContext = createContext<any>({});
+const GlobalContext = createContext<MyState>(initialState);
+
+export default GlobalContext;
+
+
+
+
+
+
+
 
