@@ -1,18 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Header, Para, Wrapper, HeaderParaWrapper, Hr } from './index.styles';
-import GlobalContext from '../../context/GlobalState';
+import AppContext from '../../context/GlobalState';
+
 
 
 
 
 const History: React.FC = () => {
+       
+    const { transactions, getTransactions, loading } = useContext(AppContext)
 
-const { transactions } = useContext(GlobalContext);        
+    useEffect(() => {
+        getTransactions()
+    }, [])
+
+
 
     return (
-
         
-        <>  
+        <>  {loading && <HeaderParaWrapper><h1>LOADING...</h1></HeaderParaWrapper>}
             <Wrapper>
                 <HeaderParaWrapper>
                     <Header>Details</Header>

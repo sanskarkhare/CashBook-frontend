@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import CashInPage from './components/CashInPage';
 import HomePage from './components/HomePage';
 import CashOutPage from './components/CashOutPage';
-import GlobalProvider from './context/store';
+import { AppProvider } from './context/GlobalState'
+
 
 
 const App: React.FC = () => {
@@ -11,7 +12,7 @@ const App: React.FC = () => {
   return (
     <>
       
-        <GlobalProvider>
+     <AppProvider>
           <Router>
               <Switch>
                 <Route path="/" exact render={() => <HomePage />} />
@@ -19,8 +20,7 @@ const App: React.FC = () => {
                 <Route path="/CashOutPage" exact render={() => <CashOutPage />} />
               </Switch>
             </Router>
-          </GlobalProvider>
-
+      </AppProvider>
     </>
   )
 }
