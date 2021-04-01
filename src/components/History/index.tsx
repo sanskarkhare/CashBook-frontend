@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
-import { Header, Para, Wrapper, HeaderParaWrapper, Hr } from './index.styles';
-import AppContext from '../../context/GlobalState';
+// import { Header, Para, Wrapper, HeaderParaWrapper, Hr } from './index.styles';
+import AppContext, { MyState } from '../../context/GlobalState';
+import { ParaRemark, ParaWrapper,ParaAmount, Wrapper, HeaderWrapper } from './index.styles';
 
 
 
@@ -17,26 +18,25 @@ const History: React.FC = () => {
 
 
     return (
-        
-        <>  {loading && <HeaderParaWrapper><h1>LOADING...</h1></HeaderParaWrapper>}
-            <Wrapper>
-                <HeaderParaWrapper>
-                    <Header>Details</Header>
-                    <Hr />
-                    {transactions.map((transaction: any) => (
-                        <Para key={transaction.id}>{transaction.remark}</Para>
-                    ))}
-                </HeaderParaWrapper>
+        <>  
+
+<Wrapper>
+            <HeaderWrapper>
+               <h2>Remark</h2>
+               <h2>Amount</h2>
+            </HeaderWrapper>
+               
+        {transactions.map((transaction: any) => (
+            <div key={transaction._id}> 
+
+                <ParaWrapper>
+                    <ParaRemark>{transaction.remark}</ParaRemark>
+                    <ParaAmount>{transaction.amount}</ParaAmount>
+                </ParaWrapper>
                 
-                <HeaderParaWrapper>
-                    <Header>Amount</Header>
-                    <Hr />
-                    {transactions.map((transaction: any) => (
-                        <Para key={transaction.id}>{transaction.amount}</Para>
-                    ))}
-                </HeaderParaWrapper>
-                
-            </Wrapper>
+            </div>
+        ))}
+</Wrapper>
         </>
     )
 }
