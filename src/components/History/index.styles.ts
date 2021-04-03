@@ -1,24 +1,21 @@
 import styled from 'styled-components';
 
-// export const Header = styled.header`
-//     color: #323232;
-//     font-weight: lighter;
-//     font-size: 1.2rem;
-//     font-family: sans-serif;
-// `;
 
 export const ParaRemark = styled.p`
     font-size: 20px;
     font-family: sans-serif;
     font-weight: lighter;
-    color: grey;
+    color: #262626;
+    padding-left: 0;
+    margin-left: 0;
 `;
 
 export const ParaAmount = styled.p`
     font-size: 20px;
     font-family: sans-serif;
     font-weight: lighter;
-    color: gray;
+    color: #262626;
+
 
 `
 export const ParaWrapper = styled.div`
@@ -31,32 +28,19 @@ export const ParaWrapper = styled.div`
     background: whitesmoke;
 `
 
-// export const Wrapper = styled.div`
-//     margin: 5rem 0 5rem 0;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-evenly;
-// `;
-
-// export const HeaderParaWrapper = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-// `
-// export const Hr = styled.hr`
-//     border: 0;
-//     clear:both; 
-//     width: 20vw;               
-//     background-color:grey;
-//     height: 1.5px;
-// `
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     height: 20rem;
-    margin-bottom: 3rem;
+    margin: 2rem 3rem 2rem 3rem;
+    border-radius: 10px;
+
+    > h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 export const HeaderWrapper = styled.div`
@@ -68,5 +52,5 @@ export const HeaderWrapper = styled.div`
     position: sticky;
     top: 0;
     padding-bottom: 20px;
-    background: white;
+    background: #dcdcdc;
 `

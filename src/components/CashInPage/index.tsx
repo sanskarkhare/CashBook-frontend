@@ -9,7 +9,7 @@ const CashInPage = () => {
     const [amount, setAmount] = useState<number>(0);
     const [remark, setRemark] = useState<any>('');
 
-   const onSubmit = (e : React.SyntheticEvent) => {
+   const onSubmit = (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const newTransaction = {
@@ -37,8 +37,8 @@ const CashInPage = () => {
 
                <button type='submit'>Save</button>
              </Wrapper>
-             
-         </form>
+          </form>
+
         </>
     )
 }
