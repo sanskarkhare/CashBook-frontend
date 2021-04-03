@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from 'react'
-// import { Header, Para, Wrapper, HeaderParaWrapper, Hr } from './index.styles';
+import React, { useContext, useEffect } from 'react';
 import AppContext from '../../context/GlobalState';
-import { ParaRemark, ParaWrapper,ParaAmount, Wrapper, HeaderWrapper } from './index.styles';
+import { ParaRemark, ParaWrapper,ParaAmount, Wrapper, HeaderWrapper, Hr } from './index.styles';
 
 
 
@@ -18,9 +17,10 @@ const History: React.FC = () => {
     return (
         <>
 
-<Wrapper>
+    <Wrapper>
             <HeaderWrapper>
                <h2>Remark</h2>
+               <Hr />
                <h2>Amount</h2>
             </HeaderWrapper>
         {loading ? (<h1>Loading...</h1>) : (
@@ -37,7 +37,7 @@ const History: React.FC = () => {
             ))}
         </>
         )}
-</Wrapper>
+    </Wrapper>
         </>
     )
 }

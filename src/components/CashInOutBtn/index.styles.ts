@@ -9,7 +9,7 @@ export const InBtn = styled.button`
     height: 10vh;
     width: 15vw;
     background-color: #3AB98C;
-    border-radius: 5%;
+    border-radius: 10px;
     outline: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     border: none;

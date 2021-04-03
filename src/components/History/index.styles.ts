@@ -6,8 +6,7 @@ export const ParaRemark = styled.p`
     font-family: sans-serif;
     font-weight: lighter;
     color: #262626;
-    padding-left: 0;
-    margin-left: 0;
+    padding: 0 1rem 0 0;
 `;
 
 export const ParaAmount = styled.p`
@@ -15,9 +14,20 @@ export const ParaAmount = styled.p`
     font-family: sans-serif;
     font-weight: lighter;
     color: #262626;
+    padding: 0 0 0 1rem;
+`;
 
-
+export const Hr = styled.hr`
+    border: 0;
+    clear:both; 
+    width: 1.5px;               
+    background-color:grey;
+    height: 8vh;
+    margin: auto;
+    padding: 0;
+    margin: 0;
 `
+
 export const ParaWrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -46,11 +56,13 @@ export const Wrapper = styled.div`
 export const HeaderWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     padding-bottom: 20px;
     background: #dcdcdc;
+    font-family: sans-serif;
+
 `
