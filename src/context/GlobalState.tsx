@@ -48,6 +48,25 @@ export const AppProvider: React.FC = ({ children }) => {
         }
     }
 
+    async function deleteTransaction(id: number) {
+
+    
+        try {
+            await axios.delete(`http://localhost:5000/${id}`);
+
+            dispatch({
+                type: 'DELETE_TRANSACTION',
+                payload: id
+            })
+        }
+        catch(err) {
+            dispatch({
+                type: 'TRANSACTION_ERROR'  ,
+                payload: err.response.data.error,
+            })
+        }
+}
+
     async function addTransactions(transaction: any) {
 
         const config = {
@@ -70,16 +89,18 @@ export const AppProvider: React.FC = ({ children }) => {
                 payload: err.response.data.error,
             })
         }
-    }
+
+}
 
 
     return(
         <AppContext.Provider value={{transactions: state.transactions, 
                                      error: state.error,
                                      loading: state.loading, 
+                                     deleteTransaction,
                                      getTransactions,
-                                     addTransactions
-                                    }}
+                                     addTransactions,
+                                     }}
         >
             {children}
         </AppContext.Provider>
@@ -88,28 +109,6 @@ export const AppProvider: React.FC = ({ children }) => {
 
 export default AppContext;
 
-
-// export const GlobalProvider = ({ children }) => {
-//     const [state, dispatch] = useReducer(AppReducer, initialState)
-
-//     async function getTransactions() {
-//         try {
-//             const res = await axios.get('https://fbp-backend.herokuapp.com/');
-
-//             dispatch({
-//                 type: 'GET_TRANSACTIONS',
-//                 payload: res.data.data,
-//             })
-//         }
-//         catch (err) {
-//             dispatch({
-//                 type: 'TRANSACTION_ERROR',
-//                 payload: err.response.data.error
-//             })
-//         }
-//     }
-
-// }
 
 
 

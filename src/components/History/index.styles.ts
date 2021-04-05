@@ -22,10 +22,9 @@ export const Hr = styled.hr`
     clear:both; 
     width: 1.5px;               
     background-color:grey;
-    height: 8vh;
-    margin: auto;
+    height: 3rem;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0 0 0;
 `
 
 export const ParaWrapper = styled.div`
@@ -36,6 +35,7 @@ export const ParaWrapper = styled.div`
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     margin-bottom: 1px;
     background: whitesmoke;
+    cursor: pointer;
 `
 
 export const Wrapper = styled.div`
@@ -51,6 +51,10 @@ export const Wrapper = styled.div`
         justify-content: center;
         align-items: center;
     }
+
+    /* .HistoryDiv {
+        cursor: pointer;
+    } */
 `
 
 export const HeaderWrapper = styled.div`

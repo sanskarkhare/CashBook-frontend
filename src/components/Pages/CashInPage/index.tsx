@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
-import { Wrapper, Label, Input, LabelWrapper } from './index.styles';
-import AppContext from '../../context/GlobalState';
+import { Wrapper, Label, Input, LabelWrapper, SaveBtn } from './index.styles';
+import AppContext from '../../../context/GlobalState';
 
 const CashInPage = () => {
 
@@ -35,7 +35,7 @@ const CashInPage = () => {
                     <Input value={remark} type="text" onChange={(e: any) => setRemark(e.target.value)} placeholder="Enter remark..."></Input>
                 </LabelWrapper>
 
-               <button type='submit'>Save</button>
+               <SaveBtn type='submit'>Save</SaveBtn>
              </Wrapper>
           </form>
 

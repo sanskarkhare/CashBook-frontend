@@ -1,7 +1,6 @@
 import React from 'react'
 import { InBtn, OutBtn, Wrapper } from './index.styles';
 import { ImArrowUp, ImArrowDown } from 'react-icons/im';
-import { Redirect, Link } from 'react-router-dom';
 
 
 

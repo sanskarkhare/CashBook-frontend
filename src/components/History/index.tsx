@@ -1,12 +1,15 @@
 import React, { useContext, useEffect } from 'react';
 import AppContext from '../../context/GlobalState';
 import { ParaRemark, ParaWrapper,ParaAmount, Wrapper, HeaderWrapper, Hr } from './index.styles';
+import { useHistory } from 'react-router-dom';
+import EditEntry from '../Pages/EditEntryPage';
 
 
 
 
 
-const History: React.FC = () => {
+const History: React.FC = ({children}) => {
+    let history = useHistory();
        
     const { transactions, getTransactions, loading } = useContext(AppContext)
 
@@ -26,7 +29,10 @@ const History: React.FC = () => {
         {loading ? (<h1>Loading...</h1>) : (
         <>
             {transactions.map((transaction: any) => (
-                <div key={transaction._id}> 
+                
+                
+                
+                <div key={transaction._id} className='HistoryDiv'> 
 
                     <ParaWrapper>
                         <ParaRemark>{transaction.remark}</ParaRemark>
@@ -34,6 +40,7 @@ const History: React.FC = () => {
                     </ParaWrapper>
                     
                 </div>
+                
             ))}
         </>
         )}
@@ -42,4 +49,6 @@ const History: React.FC = () => {
     )
 }
 
-export default History
+export default History;
+
+
